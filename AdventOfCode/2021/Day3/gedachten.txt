@@ -1,0 +1,52 @@
+Eerst decoden van de binary nummers
+
+parameter power consumption controleren
+
+genereer gamma rate binary nummers
+genereer epsilo rate nummer
+
+nieuwe power consumption = gamma rate * epsilon rate
+
+gamma rate kan bepaald worden door de meest voorkoomende bit op zijn positie van alle nummers in het raport gamma is 5 nummers
+epsilon rate is de minst voorkomende bit op de positie
+
+
+DAY 3 part 2 gedachten
+
+
+Bitcriteria maken per rating
+telkens 1 bit naar rechts en controleer of die aan de criteria voldoet. -> ja hou deze dan.
+
+Oxygen: 
+most common  1 of 0 voor de positie. -> hou dan de binary string apart.
+als ze even zijn dan 1 binary string houden
+
+co2:
+uncomoon 1 of 0 voor de positie -> apart houden
+
+als ze even zijn dan 0 binary string houden
+
+aan het einde decode ze en life = oxygen * co2
+
+
+aanpak:
+object hoeveelheid met aantal 0 op positie X
+object hoeveelheid met aantal 1 op positie X
+
+per binary string controleren of de criteria voldoet.
+
+inputfile binary string poppen als het niet klopt. dan met de rest weer bepalen wat het meeste is. 
+
+
+Oxygen:
+per positie meest common checken 
+Hou alle binary strings met 1 hierin
+als dat niet zo is en hij zit wel in de array -> haal het uit de array als er meer dan 1 value erin zitten. Stop met kijken naar deze binary string. 
+
+CO2:
+per positie minst common checken
+Hou alle binary strings met 0 hierin
+controleer of die value overeenkomt met de value op de positie van de binary string.
+Nee? -> discard de binary string in de co2 array
+Ja? -> bestaat de binary string al? -> nee voeg toe -> ja -> niks.
+ overeen komen dan 
