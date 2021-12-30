@@ -1,0 +1,38 @@
+bingo 5x5 grid
+nummer random gekozen
+marked op alle borden
+nummer mogen niet op alle borden zijn
+
+
+winnen:
+row of colom alle nummers
+
+
+
+bingo subsystem
+1 - random order nummers en random boarden
+
+score winning board
+    1laatste getal voor het winnende bord.
+    2som van alle unmarked nummers
+    1 *2 = finale score
+
+Manier om nummers te marken:
+
+
+
+Stappen om te doen:
+1 Input file cijfers array bingo cijfers volgorde
+2 Input File bingo kaarten aanmaken
+    Soort van tabel of schema maken? Rows en colommun moeten duidelijk zijn
+3. Nummer pakken en die marken
+4. checken of een bingo kaart wint
+5. Winnende kaart functie
+    laatste getal dat genoemd is.
+    2som van alle unmarked nummers
+    1 *2 = finale score
+
+
+
+Bingo kaart maken
+input is alles na 
