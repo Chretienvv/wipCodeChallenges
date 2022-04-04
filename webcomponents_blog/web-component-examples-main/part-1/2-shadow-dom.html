@@ -1,0 +1,19 @@
+<div class="shadow"></div>
+
+<script>
+  // Attach new shadow root to the div element
+  const node = document.querySelector('.shadow');
+  node.attachShadow({ mode: 'open' });
+
+  // Use node.shadowRoot to manipulate the shadow DOM
+  node.shadowRoot.innerHTML = '<p>Hello...</p>';
+
+  // You can also use node.shadowRoot.querySelector
+  // and anything you usually use to manipulate DOM
+
+  // Append a new <span> element to the shadow DOM of
+  // the node element
+  const message = document.createElement('span');
+  message.textContent = '...world!';
+  node.shadowRoot.appendChild(message);
+</script>

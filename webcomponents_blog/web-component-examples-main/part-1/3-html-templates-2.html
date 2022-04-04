@@ -1,0 +1,13 @@
+<div class="placeholder"></div>
+
+<template id="reusable-paragraph">...</template>
+
+<script>
+  // Get the template and clone it
+  const templateEl = document.getElementById('reusable-paragraph');
+  const cloned = templateEl.cloneNode(true);
+
+  // Append the template content to the div element
+  const placeholder = document.querySelector('.placeholder');
+  placeholder.appendChild(cloned.content);
+</script>

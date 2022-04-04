@@ -1,0 +1,47 @@
+<template id="news-card-template">
+  <style>
+    .news-card {
+      box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 10px;
+      padding: 16px;
+      margin: 32px;
+    }
+  </style>
+
+  <div class="news-card">
+    <h2 class="title"><slot name="title">NEEDS TITLE</slot></h2>
+    <p class="content"><slot name="content">NEEDS CONTENT</slot></p>
+
+    <a href="...">Read More</a>
+    <a href="...">Share</a>
+  </div>
+</template>
+
+<script>
+  class NewsCard extends HTMLElement {
+    constructor() {
+      super();
+      // Re-use the template in the <news-card> component
+      const template = document.getElementById('news-card-template');
+      const shadowRoot = this.attachShadow({ mode: 'open' });
+      shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+  }
+
+  customElements.define('news-card', NewsCard);
+</script>
+
+<!-- Empty NewsCard -->
+<news-card></news-card>
+
+<!-- NewsCard with content! -->
+<news-card>
+  <span slot="title">Hello World!</span>
+
+  <ul slot="content">
+    <li>This</li>
+    <li>is</li>
+    <li>quality</li>
+    <li>content.</li>
+  </ul>
+</news-card>
